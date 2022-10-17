@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --main-color:#733729;
+    --black:#232126;
+    --bg:#D9A362;
+    /* --border: .1rem solid rgba(#733729.3); */
+    --border: .1rem solid #A65526;
+    --white:#e5ecf1;
+    /* #D9AB9A rosa oscuro
+    #8C452B marron
+    #F2CAB3 rosa claro
+    #73614C marron grisado
+    #223240 azul 
+    
+
+    #232126 negro
+    #CCD4D9 gris
+    #D9A362 marron
+    #A65526 +marron
+    #733729 ++marron
+    
+    */
+
+}
+
+*{
+
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+    /* borrar */
+    /* background-color: black; */
+    color:var(--white);
+}
+
+html{
+
+    font-size: 65%;
+    /* evita el desbordamiento horizontal-*/
+    overflow-x: hidden;
+    /* salto de seccion del scrollbar */
+    scroll-padding-top: 10rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    /* ancho del scrollbar */
+    width: 1.4rem; 
+}
+
+html::-webkit-scrollbar-track{
+    /* fondo del scrollbar */
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    /* color del scrollbar */
+    background: var(--white);
+    /* borde redondeado del scrollbar */
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--main-color);
+}
+
+section{
+    /* padding:2rem 7%; */
+    padding:5% 5% 5% 5%;
+}
+
+.titulo{
+    text-align: center;
+    color:var(--white);
+    text-transform: uppercase;
+    padding-bottom: 4rem;
+    font-size: 5rem;
+}
+
+.titulo span{
+    color:var(--bg);
+
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 2rem;
+    color:var(--white);
+    background: var(--bg);
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+    border: 1px solid  var(--main-color);
+
+
+}
+
+
+.header{
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:1.5rem 7%; */
+    padding: 0.5rem;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    /* z-index: 1000; */
+}
+
+.header .logo img{
+    height: 8rem;
+    margin-left: 30%;
+    margin-right: 50%;
+}
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 2rem;
+    color:var(--bg);
+}
+.header .navbar a:hover{
+    color:var(--white);
+    border-bottom: .1rem solid var(--white);
+}
+
+/* icono menu hamburguesa */
+
+.header .icons div{
+    color:var(--bg);
+    cursor: pointer;
+    font-size: 3rem;
+
+}
+
+.header .icons div:hover{
+    color:var(--white);
+}
+
+
+#menu-btn{
+    display: none;
+}
+
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url(../img/cafe2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .contenido{
+    max-width: 30%;
+    /* max-width: 55rem; */
+
+}
+
+.home .contenido h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:var(--white);
+    /* borde de letras */
+    text-shadow: 2px 2px var(--black);
+}
+
+.home .contenido p{
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:var(--white);
+    text-shadow: 2px 2px var(--black);
+
+}
+
+
+.about .bloque{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+.about .bloque .imagen{
+    flex:1 1 45rem;
+}
+
+.about .bloque .imagen img{
+    width: 100%;
+}
+.about .bloque .contenido{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.about .bloque .contenido h3{
+    font-size: 3rem;
+    color:var(--white);
+}
+
+.about .bloque .contenido p{
+    font-size: 1.6rem;
+    color:var(--white);
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    
+}
+
+.menu .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border); 
+    background:var(--main-color); 
+
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+    border-radius: 50%;
+    border:5px solid var(--bg)
+}
+
+.menu .box-container .box h3{
+    color:var(--white);
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box .precio{
+    color:var(--white);
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box .precio span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background:var(--white);
+}
+
+.menu .box-container .box:hover > *{
+    color:var(--black);
+}
+
+.productos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.productos .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+}
+
+
+.productos .box-container .box .imagen{
+    padding: 2.5rem 0;
+}
+
+.productos .box-container .box .imagen img{
+    height: 25rem;
+}
+
+.productos .box-container .box .contenido h3{
+    color:var(--white);
+    font-size: 2.5rem;
+}
+
+
+.productos .box-container .box .contenido .precio{
+    color:var(--white);
+    font-size: 2.5rem;
+}
+
+.productos .box-container .box .contenido .precio span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+
+.contact .bloque{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .bloque .mapa{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .bloque form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .bloque form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:var(--white);
+}
+
+.contact .bloque form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contact .bloque form .inputBox span{
+    color:var(--white);
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .bloque form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:var(--white);
+    text-transform: none;
+    background:none;
+}
+
+
+
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:var(--white);
+    border:var(--black);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background: var(--black);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:var(--white);
+    border:var(--black);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:var(--black);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:var(--white);
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--bg);
+}
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%; 
+        background:var(--white);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+
+
+    }
+
+    .header .navbar a{
+        color:var(--bg);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .contenido h3{
+        font-size: 4.5rem;
+    }
+
+    .home .contenido p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
