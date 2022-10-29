@@ -4,23 +4,8 @@
     --main-color:#733729;
     --black:#232126;
     --bg:#D9A362;
-    /* --border: .1rem solid rgba(#733729.3); */
     --border: .1rem solid #A65526;
     --white:#e5ecf1;
-    /* #D9AB9A rosa oscuro
-    #8C452B marron
-    #F2CAB3 rosa claro
-    #73614C marron grisado
-    #223240 azul 
-    
-
-    #232126 negro
-    #CCD4D9 gris
-    #D9A362 marron
-    #A65526 +marron
-    #733729 ++marron
-    
-    */
 
 }
 
@@ -45,7 +30,7 @@ html{
     /* evita el desbordamiento horizontal-*/
     overflow-x: hidden;
     /* salto de seccion del scrollbar */
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 12rem;
     scroll-behavior: smooth;
 }
 
@@ -113,11 +98,15 @@ section{
     align-items: center;
     justify-content: space-between;
     /* padding:1.5rem 7%; */
+
     padding: 0.5rem;
     border-bottom: var(--border);
     position: fixed;
     top:0; left: 0; right: 0;
+
     /* z-index: 1000; */
+
+
 }
 
 .header .logo img{
@@ -161,6 +150,8 @@ section{
     background:url(../img/cafe2.jpg);
     background-size: cover;
     background-position: center;
+    margin-top: 2rem;
+ 
 }
 
 .home .contenido{
@@ -193,6 +184,7 @@ section{
     align-items: center;
     background:var(--black);
     flex-wrap: wrap;
+    
 }
 
 .about .bloque .imagen{
@@ -201,9 +193,10 @@ section{
 
 .about .bloque .imagen img{
     width: 100%;
+
 }
 .about .bloque .contenido{
-    flex:1 1 45rem;
+    flex:1 1 40rem;
     padding:2rem;
 }
 
@@ -307,6 +300,57 @@ section{
 }
 
 
+.productos #promo{
+    text-align: center;
+    margin-top: 10rem;
+    border: var(--bg) solid 1px;
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.productos h3{
+    font-size: 3rem;
+
+}
+
+.productos .form .inputBox{
+    
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+   
+}
+
+
+
+.productos #correo{
+    
+border-radius: 10px;
+text-align: center;
+font-style: italic;
+background:white
+
+
+}
+.productos #correo:hover{
+    background:var(--white);
+    border-style: double;
+   
+}
+
+.productos .inputBox input{
+    width: 50%;
+    padding:0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color:var(--black);
+    text-transform: none;
+    background:var(--bg);
+    
+}
+
 .contact .bloque{
     display: flex;
     background:var(--black);
@@ -361,6 +405,8 @@ section{
 .footer{
     background: var(--black);
     text-align: center;
+    width: 100vw;
+
 }
 
 .footer .share{
@@ -402,7 +448,7 @@ section{
 }
 
 .footer .credit{
-    font-size: 2rem;
+    font-size: 1.25rem;
     color:var(--white);
     font-weight: lighter;
     padding:1.5rem;
@@ -415,6 +461,82 @@ section{
 
 
 
+.bloque-faq {
+
+
+max-width: 100vw;
+margin-top:2rem;
+padding-bottom:1rem;
+border-bottom:2px solid #fff;
+cursor: pointer;
+
+
+}
+
+
+
+.question {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+}
+
+
+
+.question h3{
+
+font-size:1.8rem;
+
+}
+.answer{
+
+    max-height: 0;
+    overflow: hidden;
+    transition:max-height 1s ease;
+}
+
+
+.answer p{
+
+    padding-top:1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.bloque-faq.active .answer{
+max-height: 300px;
+animation: fade 1s ease-in-out;
+
+}
+
+.bloque-faq.active svg{
+transform: rotate(180deg);
+
+
+}
+
+svg{
+transition: transform 0.5s ease-in;
+
+}
+
+@keyframes fade{
+from{
+
+    opacity: 0;
+    transform: translateY(-10px);
+}
+to{
+opacity: 1;
+transform: translateY(0px);
+
+}
+
+}
+
+/* corte 1 */
 
 @media (max-width:991px){
 
@@ -431,7 +553,7 @@ section{
     }
 
 }
-
+/* corte 2 */
 
 @media (max-width:768px){
 
@@ -443,9 +565,10 @@ section{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%; 
-        background:var(--white);
-        width: 30rem;
-        height: calc(100vh - 9.5rem);
+        background:var(--black);
+        width: 15rem;
+        height: 52vh;
+
     }
 
     .header .navbar.active{
@@ -479,7 +602,7 @@ section{
     }
 
 }
-
+/* corte 3*/
 @media (max-width:450px){
 
     html{
